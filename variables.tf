@@ -42,6 +42,13 @@ variable "policy_arns" {
   default     = []
 }
 
+variable "trusted_entities" {
+  description = "Trusted entities other than lambda.amazonaws.com that can assume the lambda's role"
+  type        = list(string)
+  default     = []
+}
+
+
 #---------------------------------------------------------------------------------------------------
 # CloudWatch Log Group arguments
 #---------------------------------------------------------------------------------------------------

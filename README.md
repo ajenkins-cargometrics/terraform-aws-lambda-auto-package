@@ -64,6 +64,7 @@ Check [examples](./examples) for non-python examples.
 | memory\_size | Amount of memory in MB your Lambda Function can use at runtime. | string | `"128"` | no |
 | output\_path | A path to which the source directory is archived before uploading to AWS. | string | n/a | yes |
 | policy\_arns | A list of IAM policy ARNs attached to the lambda function. | list | `[]` | no |
+| trusted\_entities | A list of service principle names that can assume the lambda role, other than lambda.amazonaws.com. | list | `[]` | no |
 | publish | Whether to publish creation/change as new Lambda Function Version. | string | `"false"` | no |
 | reserved\_concurrent\_executions | The amount of reserved concurrent executions for this lambda function. A value of 0 disables lambda from being triggered and -1 removes any concurrency limitations. | string | `"-1"` | no |
 | retention\_in\_days | Specifies the number of days you want to retain log events in the specified log group. | number | `"null"` | no |

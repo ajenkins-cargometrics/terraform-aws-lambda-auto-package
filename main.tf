@@ -11,7 +11,7 @@ resource "aws_iam_role" "this" {
     {
       "Action": "sts:AssumeRole",
       "Principal": {
-        "Service": "lambda.amazonaws.com"
+        "Service": ${jsonencode(concat(["lambda.amazonaws.com"], var.trusted_entities))}
       },
       "Effect": "Allow"
     }
